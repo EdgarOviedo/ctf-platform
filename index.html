@@ -9,30 +9,62 @@
     <!-- Estilos CSS -->
     <link href="css/styles.css" rel="stylesheet">
 
+    <!-- Fuente DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
     <title>CTF</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
 
-        <div class="topbar">
-            <div class="topbar-left">
-                <span class="topbar-text">Club de Seguridad Informatica - CTF</span>
+        <div class="topbar" id="topbar">
+            <div class="topbar-left" id="topbar-left">
+                <p>Club CTF FCFM</p>
             </div>
 
-            <div class="topbar-right">
-                <span class="topbar-text">Leaderboard</span>
-                <span class="topbar-text">Sign in</span>
-                <span class="topbar-text">Log in</span>
+            <div class="topbar-right" id="topbar-right">
+                <p>Inicio</p>
+                <p>Marcador</p>
+                <button type="button" onclick="showLogin()">Jugar</button>
             </div>
         </div>
 
-        <div class="home-page">
-            <img src="" alt="Convocatoria para CTF">
-            <h1>{tiempo restante para el inicio}</h1>
-            <h2>Actualizaciones al momento en fb: @ClubCTF.FCFM</h2>
+
+        <div class="body" id="body">
+            <h1>El mejor lugar para practicar<br />seguridad informática</h1>
+            <p>Esta es una plataforma para hostear torneos Capture the<br />flag (CTF) desarrollada por estudiantes para estudiantes</p>
+            
+            <div class="body-btns">
+                <button type="button" onclick="showLogin()">Empezar</button>
+
+                <a href="">
+                    <img src="assets/read_more.svg">
+                </a>
+            </div>
         </div>
 
+        <div class="footer" id="footer">
+            <img src="assets/partners.svg">
+        </div>
     </div>
+
+
+    <div class="login-popup" id="login-popup" onclick="hideLogin()">
+        <div class="login-popup-content" id="login-popup-content">
+            <h1>Inicia sesión</h1>
+            <form action="">
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <input type="button" value="Enviar">
+            </form>
+            <a href="#">¿No tienes cuenta? Registrate aquí</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+
 </body>
 </html>
