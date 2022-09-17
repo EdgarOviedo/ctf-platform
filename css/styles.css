@@ -149,7 +149,7 @@ html, body{
 
 
 
-.login-popup{
+.login-popup, .signin-popup{
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
@@ -161,7 +161,7 @@ html, body{
     text-align: center;
 }
 
-.login-popup-content{
+.login-popup-content, .signin-popup-content{
     height: 650px;
     width: 650px;
     position: relative;
@@ -169,7 +169,7 @@ html, body{
     background: radial-gradient(156.62% 156.62% at -23.69% -10.69%, #223429 0%, #101213 100%)
 }
 
-.login-popup-content h1{
+.login-popup-content h1, .signin-popup-content h1{
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -179,12 +179,7 @@ html, body{
     color: #FFFFFF;
 }
 
-.login-popup-content button{
-    background: red;
-    color: red;    
-}
-
-.login-popup-content input[type=text]{
+.login-popup-content input[type=text], .signin-popup-content input[type=text], input[type=email]{
     width: 500px;
     height: 90px;
     margin: 20px auto;
@@ -203,7 +198,7 @@ html, body{
     align-items: center;
 }
 
-.login-popup-content input[type=password]{
+.login-popup-content input[type=password], .signin-popup-content input[type=password]{
     width: 500px;
     height: 90px;
     margin: 20px auto;
@@ -222,7 +217,7 @@ html, body{
     align-items: center;
 }
 
-.login-popup-content input[type=button]{
+.login-popup-content input[type=button], .signin-popup-content input[type=button]{
     cursor: pointer;
     width: 236px;
     height: 87px;
@@ -240,7 +235,7 @@ html, body{
     margin-bottom: 35px;
 }
 
-.login-popup-content a{
+.login-popup-content a, .signin-popup-content a{
     color: white;
 
     font-family: 'DM Sans';

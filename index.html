@@ -40,7 +40,7 @@
             <div class="body-btns">
                 <button type="button" onclick="showLogin()">Empezar</button>
 
-                <a href="">
+                <a href="#">
                     <img src="assets/read_more.svg">
                 </a>
             </div>
@@ -52,7 +52,7 @@
     </div>
 
 
-    <div class="login-popup" id="login-popup" onclick="hideLogin()">
+    <div class="login-popup" id="login-popup">
         <div class="login-popup-content" id="login-popup-content">
             <h1>Inicia sesión</h1>
             <form action="">
@@ -60,7 +60,21 @@
                 <input type="password" placeholder="Contraseña">
                 <input type="button" value="Enviar">
             </form>
-            <a href="#">¿No tienes cuenta? Registrate aquí</a>
+            <a href="#" onclick="showSignin()">¿No tienes cuenta? Registrate aquí</a>
+        </div>
+    </div>
+
+    <div class="signin-popup" id="signin-popup">
+        <div class="signin-popup-content" id="signin-popup-content">
+            <h1>Crea una cuenta</h1>
+            <form action="">
+                <input type="email" placeholder="Correo electrónico">
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <input type="password" placeholder="Repite contraseña">
+                <input type="button" value="Enviar">
+            </form>
+            <a href="#" onclick="showLogin()">¿Ya tienes cuenta? Inicia sesión</a>
         </div>
     </div>
 
