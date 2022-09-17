@@ -1,22 +1,47 @@
-function showLogin(){
-    document.querySelector(".login-popup").style.display = "flex";
+let mode = "login";
+
+function closeForm(evt){
+  if (mode == "login"){
+    if (evt.target.className != "login-popup"){
+      return;
+    }else{
+      document.getElementById('login-popup').removeEventListener("click", closeForm);
+      document.querySelector(".login-popup").style.display = "none";
+    }
+
+  } else if (mode == "signin"){
+    if (evt.target.className != "signin-popup"){
+      return;
+    }else{
+      document.getElementById('signin-popup').removeEventListener("click", closeForm);
+      document.querySelector(".signin-popup").style.display = "none";
+    }
+  }
 }
 
-document.addEventListener("click", function(evt) {
-    let inside = document.getElementById('login-popup-content'),
-      target = evt.target,
-      container = document.getElementById('container');
-    do {
-        if(target == container){
-            return;
-        }
+function showLogin() {
+  mode = "login";
 
-        if(target == inside) {
-            // This is a click inside
-            return;
-      }
-      target = target.parentNode;
-    } while (target);
-    // This is a click outside.
+  //Close signin
+  if (document.querySelector(".signin-popup").style.display == "flex"){
+    document.getElementById('signin-popup').removeEventListener("click", closeForm);
+    document.querySelector(".signin-popup").style.display = "none";
+  }
+
+  document.querySelector(".login-popup").style.display = "flex";
+  document.getElementById('login-popup').addEventListener("click", closeForm);
+}
+
+function showSignin() {
+  mode = "signin";
+
+  //Close login
+  if (document.querySelector(".login-popup").style.display == "flex"){
+    document.getElementById('login-popup').removeEventListener("click", closeForm);
     document.querySelector(".login-popup").style.display = "none";
-  });
+  }
+
+  //Open signin
+  document.querySelector(".signin-popup").style.display = "flex";
+  document.getElementById('signin-popup').addEventListener("click", closeForm);
+}
